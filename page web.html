@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw & Building Co.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="shadow-bg">
+        <nav>
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo Entreprise" id="logo" title="Cliquez pour faire tourner">
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#" class="nav-item shadow-text">Commander 🔹</a>
+                    <div class="dropdown-content">
+                        <a href="#commander-plan" class="expand-on-touch">✏️Plan</a>
+                        <a href="#commander-devis" class="expand-on-touch">📝Devis</a>
+                    </div>
+                </li>
+                <li class="dropdown-click">
+                    <a href="#" class="nav-item shadow-text">Menu 🔹</a>
+                    <div class="dropdown-content-click">
+                        <a href="#realisations" class="shadow-text expand-on-click">🏆Nos réalisations</a>
+                        <a href="#partenaires" class="shadow-text expand-on-click">Nos partenaires</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                     <a href="#" class="nav-item">Nous contacter 🔹</a>
+                     <div class="dropdown-content contact-info">
+                        <a href="tel:+2250757254662" class="expand-on-touch"><i class="fas fa-phone"></i> 📞(+225) 07 57 25 46 62</a>
+                        <a href="tel:+2250586858997" class="expand-on-touch"><i class="fas fa-phone"></i> 📞(+225) 05 86 85 89 97</a>
+                        <a href="mailto:drawandbuildingco@gmail.com" class="expand-on-touch"><i class="fas fa-envelope"></i> 📩drawandbuildingco@gmail.com</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="location-section shadow-bg blue-transparent">
+            <h2>📍<span class="souligne"> Localisation</span></h2>
+                 <p>Nous sommes situés à Abidjan, Côte d'Ivoire🇨🇮.</p>
+        </section>
+
+        <section id="realisations" class="realisations-section shadow-bg">
+            <h2><span class="souligne">Nos réalisations</span></h2>
+            <div class="gallery">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="Image2.png" alt="Réalisation 1" class="round-shadow">
+                        <p>Rendu3D</p>
+                    </div>
+                    <div class="slide">
+                        <img src="Plan1.png" alt="Réalisation 2" class="round-shadow">
+                        <p>PlanRDC</p>
+                    </div>
+                    <div class="slide">
+                        <img src="Image.png" alt="Réalisation 2" class="round-shadow">
+                        <p>Rendu3D</p>
+                    </div>
+                    <div class="slide">
+                        <img src="Plan2.png" alt="Réalisation 2" class="round-shadow">
+                        <p>Plan Villa</p>
+                    </div>
+                    <div class="slide">
+                        <img src="image3.png" alt="Réalisation 3" class="round-shadow">
+                        <p>Rendu3D</p>
+                    </div>
+                    <div class="slide">
+                        <img src="Facade.png" alt="Réalisation 2" class="round-shadow">
+                        <p>Façade</p>
+                    </div>
+        </section>
+        
+        <section>
+                <div class="container">
+                <h2 class="couleur_bleue"><span class="souligne">Promotion</span> 🔥🔥🔥</h2>
+                </div>
+                <div class="video-container">
+                    <video class="round-shadow" controls>
+                        <source src="Video.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
+        </section>
+
+        <section id="commander-plan" class="form-section">
+            <h2><span class="souligne">Commander un Plan</span></h2>
+            <p>Remplissez svp le formulaire suivant si vous souhaitez générer le plan de votre maison.</p>
+            <form id="plan-form">
+                <label for="surface">Surface du terrain (m²)*</label>
+                <input type="number" id="surface" required>
+
+                <label for="travaux">Travaux*</label>
+                <select id="travaux" required>
+                    <option value="Nouvelle construction">Nouvelle construction</option>
+                    <option value="Réhabilitation">Réhabilitation</option>
+                    <option value="Autre">Autre (à préciser)</option>
+                </select>
+                <input type="text" id="travaux-autre" placeholder="Préciser si 'Autre'">
+
+                <label for="type-maison">Type de maison*</label>
+                <select id="type-maison" required>
+                    <option value="Villa">Villa</option>
+                    <option value="Immeuble">Immeuble</option>
+                    <option value="Autre">Autre (à préciser)</option>
+                </select>
+                <input type="text" id="type-maison-autre" placeholder="Préciser si 'Autre'">
+
+                <label for="pieces">Nombre de pièces / niveau*</label>
+                <input type="text" id="pieces" required>
+
+                <label>Style de maison*</label>
+                <div>
+                    <input type="checkbox" id="style-moderne" value="Moderne"> <label for="style-moderne">Moderne</label>
+                    <input type="checkbox" id="style-contemporain" value="Contemporaine"> <label for="style-contemporain">Contemporaine</label>
+                </div>
+                
+                <label for="image-terrain">Image du terrain (facultatif, max 1Mo)</label>
+                <input type="file" id="image-terrain" accept="image/*">
+
+                <label for="nom">Nom et Prénoms*</label>
+                <input type="text" id="nom" required>
+
+                <label for="tel">Numéro de téléphone*</label>
+                <input type="tel" id="tel" required>
+
+                <label for="email">Adresse mail (facultatif)</label>
+                <input type="email" id="email">
+
+                <button type="submit" class="btn-validate">Valider</button>
+            </form>
+        </section>
+
+        <section id="commander-devis" class="form-section">
+            <h2>Commander un Devis</h2>
+            <form id="devis-form">
+                <label>Ajouter les plans du devis souhaité</label>
+                <input type="file" id="plan-devis" required>
+                <p class="info-text">Note : Le fichier sera à envoyer manuellement après validation.</p>
+                <button type="submit" class="btn-validate">Valider et Envoyer les Plans</button>
+            </form>
+        </section>
+
+        <section id="travaux-publics" class="form-section">
+            <h2>Travaux Publics</h2>
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab('VRD')">VRD</button>
+                <button class="tab-button active" onclick="openTab ('Hydraulique')">Hydraulique</button>
+                <button class="tab-button active" onclick="openTab('Assainissement')">Assainissement</button>
+            </div>
+
+            <form id="vrd-form" class="tab-content active">
+                <h3>VRD</h3>
+                <input type="checkbox" id="terrassement" value="Terrassement"> <label for="terrassement">Terrassement</label><br>
+                <input type="checkbox" id="reprofilage-lourd" value="Reprofilage lourd"> <label for="reprofilage-lourd">Reprofilage lourd</label><br>
+                <input type="checkbox" id="reprofilage-leger" value="Reprofilage léger"> <label for="reprofilage-leger">Reprofilage léger</label><br>
+                <input type="checkbox" id="bitumage" value="Bitumage"> <label for="bitumage">Bitumage</label><br>
+                <input type="text" id="vrd-autre" placeholder="Autres informations (à préciser)">
+                <label for="duree-vrd">Durée du projet*</label>
+                <input type="text" id="duree-vrd" required>
+                <button type="submit" class="btn-validate">Valider VRD</button>
+            </form>
+
+            <form id="hydraulique-form" class="tab-content">
+                <h3>Hydraulique</h3>
+                <input type="checkbox" id="chateau-eau" value="Château d'eau"> <label for="chateau-eau">Château d'eau</label><br>
+                <input type="checkbox" id="forage" value="Forage"> <label for="forage">Forage</label><br>
+                <input type="checkbox" id="aep" value="AEP (canalisation)"> <label for="aep">AEP (canalisation)</label><br>
+                <input type="text" id="hydraulique-autre" placeholder="Autres informations (à préciser)">
+                <label for="duree-hydraulique">Durée du projet*</label>
+                <input type="text" id="duree-hydraulique" required>
+                <button type="submit" class="btn-validate">Valider Hydraulique</button>
+            </form>
+
+            <form id="assainissement-form" class="tab-content">
+                <h3>Assainissement</h3>
+                <input type="checkbox" id="pose-bordure" value="Pose de bordure"> <label for="pose-bordure">Pose de bordure</label><br>
+                <input type="checkbox" id="dalot" value="Dalot"> <label for="dalot">Dalot</label><br>
+                <input type="checkbox" id="buse" value="Buse"> <label for="buse">Buse</label><br>
+                <input type="checkbox" id="caniveau" value="Caniveau"> <label for="caniveau">Caniveau</label><br>
+                <input type="text" id="assainissement-autre" placeholder="Autres informations (à préciser)">
+                <label for="duree-assainissement">Durée du projet*</label>
+                <input type="text" id="duree-assainissement" required>
+                <button type="submit" class="btn-validate">Valider Assainissement</button>
+            </form>
+        </section>
+
+        <section id="paiement" class="paiement-section">
+            <h2>Payer la Commande</h2>
+            <div class="paiement-buttons">
+                <button id="btn-panier" class="btn-secondary">🛒 Panier</button>
+                <button id="btn-payer" class="btn-validate">Payer</button>
+            </div>
+            <div id="logos-paiement" style="display: none;">
+                <img src="orange-money.png" alt="Orange Money" class="payment-logo">
+            </div>
+            <p class="info-text">NB: les paiements se font actuellement uniquement via Orange Money.</p>
+        </section>
+        
+        <div id="panier-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Récapitulatif de la Commande</h2>
+                <pre id="recap-content"></pre>
+            </div>
+        </div>
+
+        <footer id="partenaires">
+            <h2>Nos partenaires</h2>
+            <div class="partners-logos">
+                <img src="OM.png" alt="Logo Partenaire 1">
+                <img src="MTN money.webp" alt="Logo Partenaire 2">
+                <img src="Wave.webp" alt="Logo Partenaire 3">
+                <img src="paiement.webp" alt="Logo Partenaire 3">
+            </div>
+        </footer>
+    </main>
+    <div class="container">
+    <p>&copy; 2025 D&B.Co. Tous droits réservés.</p>
+   </div>
+    <script src="script.js"></script>
+</body>
+</html>
